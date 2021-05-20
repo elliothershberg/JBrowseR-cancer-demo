@@ -1,0 +1,18 @@
+library(tidyverse)
+
+# coordinates of genes w/ reported gene fusions from SKBR3 paper
+gene_fusions <- tribble(
+  ~chrom, ~start, ~end, ~name,
+  "chr14", 50234326, 50249909, "KLHDC2",
+  "chr8", 121547985, 121825513, "SNTB1",
+  "chr17", 76670130, 76778379, "CYTH1",
+  "chr8", 117654369, 117779164, "EIF3H",
+  "chr20", 34213953, 34252878, "CPNE1",
+  "chr20", 47240790, 47444420, "PREX1",
+  "chr17", 38060848, 38076107, "GSDMB",
+  "chr8", 125500726, 125551699, "TATDN1",
+  "chr8", 116962736, 117337297, "LINC00536",
+  "chr8", 128806779, 129113499, "PVT1"
+)
+
+write_csv(gene_fusions, file = "gene_fusions.csv")
